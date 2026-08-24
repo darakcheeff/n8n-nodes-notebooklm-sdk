@@ -20,7 +20,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --ignore-scripts
 
       - name: Build
         run: npm run build
@@ -40,6 +40,7 @@ jobs:
             - Updated `notebooklm-sdk` dependency to include domain migration fix (`notebook.google.com`).
             
             ## Installation in n8n
+            In your n8n directory (e.g. `~/.n8n/nodes` or in custom community node installation):
             ```bash
             npm install https://github.com/darakcheeff/n8n-nodes-notebooklm-sdk/releases/download/v0.2.2-patch1/n8n-nodes-notebooklm-sdk-0.2.1.tgz
             ```
